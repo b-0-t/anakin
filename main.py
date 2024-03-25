@@ -22,7 +22,7 @@ divs_with_countryList = soup.find_all('div',class_='list link-list-band--4-colum
 
 countries=[]
 for spans in range(1,len(divs_with_countryList)):
-    divs_with_countryList[spans].find_all('span').text
+    countries+=[country.text for country in divs_with_countryList[spans].find_all('span')]
 
 
 
